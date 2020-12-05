@@ -1,0 +1,76 @@
+<ion-header class="dark_theme">
+    <ion-toolbar  color="dark" class="toolbar_border">
+      <ion-buttons slot="start" >
+        <ion-menu-button color="danger"></ion-menu-button>
+      </ion-buttons>
+      <ion-title  id="head_line" color="danger">
+        {{jezik.Profil}}
+      </ion-title>
+      <div class="line"></div>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content id="profile_content_id" class="dark_theme" style="height: 100%;margin-top:0; padding-top:0px;">
+      <div  id="background_color">
+        <div style="width: 100%;height: 10px;"></div>
+        <div id=SpottedObjave>
+            <div style="background-color:  rgba(0,0,0,0.75);
+            width: 85%;margin: 0 auto;padding:7px;padding-bottom: 15px;" >
+              <h5>{{jezik.Vase_nedavne_objave}}</h5>
+              <div style="width:100%;" *ngFor="let post of Posts">
+                  <p style="text-align: center;">{{post.id}}</p>
+                  <p (click)="openPost(post.approved,post.id)" style="text-decoration: underline;text-align: center;">{{post.approved}}</p>
+                </div>
+              <div id="buttoner" (click)="ShowPosts()">
+                <ion-button  expand="block" color="danger">{{jezik.Prikazi}}</ion-button>
+              </div>
+            </div>
+        </div>
+        
+        
+        <div *ngIf="checkprofile" id="profile_card" style="display: block">
+          <div id="login_div" style="display:block;">
+            <div style="background-color:  rgba(0,0,0,0.75);
+            width: 85%;margin: 0 auto;height: 365px;" >
+              <h5>{{jezik.Potvrdite_profil}}</h5>
+              <div class="input">
+                <ion-input  [(ngModel)]="nadimak"  color="danger" placeholder="    {{jezik.Unesite_nadimak}}" type="text"></ion-input>
+              </div>
+              <div class="input">
+                <ion-input   [(ngModel)]="lozinka" color="danger" placeholder="    {{jezik.Unesite_lozinku}}" type="password"></ion-input>
+              </div>
+              <div class="input">
+                <ion-input  [(ngModel)]="instagram"  color="danger" placeholder="    {{jezik.Unesite_instagram_profil}}" type="text"></ion-input>
+              </div>
+        
+              <h6 class="colorer">{{jezik.Ponovo_unesite}}</h6>
+              <div (click)="PotvrdiProf()" id="button">
+                <ion-button  expand="block"  color="danger">{{jezik.Potvrdi}}</ion-button>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div *ngIf="checkPremium" id=spottedx>
+          <div style="background-color:  rgba(0,0,0,0.75);
+          width: 85%;margin: 0 auto;height: 320px;padding:7px" >
+            <h5>{{jezik.Postanite_Premium_clan}}</h5>
+            <p>{{jezik.Premium_clanovi_nemaju}}</p>
+            <div (click)="KupiPremium()" id="button">
+                <ion-button expand="block" color="danger">{{jezik.Kupi}}</ion-button>
+              </div>
+          </div>
+      </div>
+
+      <div style="width:92%;margin:0 auto;">
+        <ion-button (click)="goToTutorial()" expand="block" color="danger">Kako koristiti našu aplikaciju</ion-button>
+      </div>
+
+
+
+
+
+
+      </div>
+  </ion-content>

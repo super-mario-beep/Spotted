@@ -1,0 +1,7 @@
+{
+  "name": "spottedapk",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

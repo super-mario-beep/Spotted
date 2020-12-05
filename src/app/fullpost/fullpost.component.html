@@ -1,0 +1,148 @@
+<ion-header class ="dark_theme">
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start" (click)="goBack()">
+        <ion-icon style="transform: rotate(180deg);margin-left: 12px;" name="play" color="danger" slot="start"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="openPostMenu()">
+        <ion-icon style="transform: rotate(0deg);margin-right: 12px;margin-left: 22px;;" name="md-create" color="danger" slot="start"></ion-icon>
+    </ion-buttons>
+        <ion-title id="head_line" color="danger">
+            {{jezik.Komentiraj}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content  id="fullcontent_id" class="dark_theme" style="margin-top:0; padding-top:0px">
+    <div  id="background_color">
+        <div id="background_padding"></div>
+
+        <div id="comment_box" class="card_box" style="display: none;margin-top:-6px;height: 161px;">
+            <div class="text_area">
+                <ion-item color="primary">
+                    <ion-textarea rows="4" placeholder="{{jezik.Unesi_komentar}}" (ionChange)="infoFilter(selectKomentar)" [(ngModel)]="selectKomentar"></ion-textarea>
+                </ion-item>
+            </div>  
+            <div class="footer_leave_comment">
+                <div  class="footer_buttons" style="border-right: 1px solid gray;float:left">
+                    <div style="width: 70%;height: 55px;margin:0 auto;">
+                        <ion-button (click)="PrekiniKomentar()" expand="block" size="defalut" color="danger">{{jezik.Prekini}}</ion-button>
+                    </div>
+                </div>
+                <div class="footer_buttons">
+                    <div style="width: 70%;height: 55px;margin:0 auto;">
+                        <ion-button (click)="PostKomentar()" expand="block" size="defalut" color="danger">{{jezik.Komentiraj}}</ion-button>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <ion-content  id="content_id" *ngIf="global_username.length > 2" style="width: 100%;min-height: 40px;">
+            <div class="background_color_div">
+                <div *ngIf="InstagramUsers.length == 0" style="width:35px;height: 60px;margin:0 auto;padding-top:5px;">
+                    <ion-spinner color="danger" name="lines"></ion-spinner>
+                </div>
+                <div class="card_box">
+                    <div *ngFor="let user of InstagramUsers">
+                        <div (click)="tagUser(user.TagName)" class="insta_user">
+                            <div style="height: 60px;width:70px;float:left;">
+                                <img id="{{user.TagName}}" src={{user.ImageUrl}}>
+                            </div>
+                            <div style="height:60px;float:left;">
+                                <p ><b>{{user.FullName}}</b></p>
+                                <p style="margin-top: 6px;">@{{user.TagName}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+
+        <div class="background_color_div" *ngFor="let post of posts">
+            <div id="space_line"></div>
+            <div class="card_box">
+                <div class="image">
+                    <img src={{post.imageURL}}>
+                </div>
+                <p style="text-align: center;
+                    font-size: 17px;margin-top: 3px;margin-bottom:7px; font-family: 'Comic Sans MS';">
+                    {{post.drzava}} - {{post.regija}}
+                </p>
+                <p style=" margin: 0px;text-align: center;
+                    font-size: 14px; font-family: 'Comic Sans MS';">
+                    {{post.lokacija}}
+                </p>
+                <div class="description">
+                    <p style="margin-top: 8px;">
+                            {{post.description}}  -  Događaj iz dana {{post.datum}} u {{post.vrijeme}}.
+                    </p>    
+                </div>
+            </div>
+            <div  class="footer">
+                <div class="footer_button"  (click)="LikePost(post.id)" style="border-left:0px;">
+                    <div class="icon_position" >
+                        <img src="{{post.like_image}}">
+                    </div>
+                    <p style="color:red" *ngIf="post.getIsLiked()" id="like_color">{{post.likes}}</p>
+                    <p *ngIf="!post.getIsLiked()" id="like_color">{{post.likes}}</p>
+                </div>
+                <div class="footer_button" (click)="openPostMenu()">
+                    <div class="icon_position">
+                        <img src="{{post.comment_image}}">
+                    </div>
+                    <p>{{jezik.Napisi_komentar}}</p>
+                </div>
+                <div (click)="OpenShare(post.id)" class="footer_button">
+                    <div class="icon_position">
+                        <img src="{{post.share_image}}">
+                    </div>
+                    <p>{{jezik.Podijeli}}</p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 0px;margin-bottom:0px" id="space_line"></div>
+
+        <div class="komentari" style="width: 100%;">
+            <div  *ngFor="let comment of Comment_array" class="card_comments" id="{{comment.id}}">
+                    <div class="header_in_comments">
+                        <p style="float:left;">{{comment.user_name}}</p>
+                        <p style="float:right;">#{{comment.id}}</p>
+                    </div>
+                    <div class="post_text" >
+                        <div style="display:inline-block" *ngFor="let podkomentar of comment.subcomment">
+                            <div class="subcomment" id="gray_id">
+                                {{podkomentar.textCom}}
+                            </div>
+                            <div  (click)="openInstagramProfile(podkomentar.tagCom)" class="subcomment">
+                                {{podkomentar.tagCom}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_in_comments">
+                        <div class="like_button_comments" (click)="LikeComment(comment.id)">
+                            <div class="icons_in_comments" >
+                                <img src="{{post_likes_image}}">
+                            </div>
+                            <div class="text_foter">
+                                <p *ngIf="!comment.liked" id="like_num{{comment.id}}">x {{comment.likes}}</p>
+                                <p style="color:red" *ngIf="comment.liked" id="like_num{{comment.id}}">x {{comment.likes}}</p>
+                            </div>
+                        </div>
+                        <div (click)="PrijaviKomentar(comment.id)" class="like_button_comments2">
+                            <p style="font-size: 13px;text-align: center;margin:0;margin-top: -7px;">{{jezik.Prijavi_komentar}}</p>
+                        </div>
+                    </div> 
+            </div>
+        </div>
+        <div style="height: 20px;width: 100%"></div>
+    </div>
+
+</ion-content>
+
+<div  style="display:none" (click)="openPostMenu()" class="dark_theme" id="comment_banner">
+    <div style="width: 21px;height: 21px;margin:0 auto;">
+        <ion-icon class="icon_color" style="font-size: 22px;transform: rotate(180deg);" name="ios-arrow-down"></ion-icon>
+    </div>
+    <p class="p_banner" style="text-align: center;margin-top: -3px;margin-bottom: 0;">{{jezik.Unesi_komentar}}</p>
+</div>
+
+

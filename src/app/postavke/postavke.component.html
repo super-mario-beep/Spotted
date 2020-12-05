@@ -1,0 +1,152 @@
+<ion-header class="dark_theme">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start" >
+        <ion-menu-button color="danger"></ion-menu-button>
+      </ion-buttons>
+      <ion-title color="danger">
+        {{jezik.Postavke}}
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content id="content_id" class="dark_theme" style="height:100%;margin-top:0; padding-top:0px;">
+      <div id="background_color">
+        <div class="card_border">
+        <div class="card">
+          <div class=card_content  style="margin-top: 2px">
+              <ion-radio-group>
+                  <ion-list-header color="primary">
+                    <ion-label>{{jezik.Promjenite_temu_aplikacije}}</ion-label>
+                  </ion-list-header>
+
+                  <ion-item  (click)="changeUserUI(1)" color="primary">
+                    <ion-label color="light">{{jezik.Tamna_tema}}</ion-label>
+                    <ion-radio id="dark_theme_id" slot="start" color="danger" value="apple" ></ion-radio>
+                  </ion-item>
+        
+                  <ion-item (click)="changeUserUI(2)" color="primary" >
+                    <ion-label color="light" >{{jezik.Svijetla_tema}}</ion-label>
+                    <ion-radio id="light_theme_id"  slot="start" color="danger" value="bubble" ></ion-radio>
+                  </ion-item>
+        
+                  <ion-item color="primary" (click)="CantUse()">
+                    <ion-icon class="locked" name="lock"></ion-icon>
+                    <ion-label  color="light">{{jezik.Zlatna_s_bijelim_kontrastom}}</ion-label>
+                  </ion-item>
+                </ion-radio-group>
+          </div>
+
+          <div class=card_content  style="margin-top: 2px">
+            <ion-radio-group>
+                <ion-list-header color="primary">
+                  <ion-label>{{jezik.Promjenite_jezik_aplikacije}}</ion-label>
+                </ion-list-header>
+
+                <ion-item  (click)="changeUserLanguage(1)" color="primary">
+                  <ion-label color="light">{{jezik.Hrv_latinica}}</ion-label>
+                  <ion-radio id="l1" slot="start" color="danger" value="apple" ></ion-radio>
+                </ion-item>
+      
+                <ion-item (click)="changeUserLanguage(2)" color="primary" >
+                  <ion-label color="light" >{{jezik.BiH_latinica}}</ion-label>
+                  <ion-radio id="l2"  slot="start" color="danger" value="bubble" ></ion-radio>
+                </ion-item>
+      
+                <ion-item  (click)="changeUserLanguage(3)" color="primary">
+                  <ion-label color="light">{{jezik.BiH_cirilica}}</ion-label>
+                  <ion-radio id="l3" slot="start" color="danger" value="tree" ></ion-radio>
+                </ion-item>
+
+                <ion-item  (click)="changeUserLanguage(4)" color="primary">
+                  <ion-label color="light">{{jezik.Srb_cirilica}}</ion-label>
+                  <ion-radio id="l4" slot="start" color="danger" value="car" ></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+        </div>
+
+          <div class=card_content>
+              <ion-radio-group>
+                  <ion-list-header color="primary">
+                    <ion-label>{{jezik.postjetite_web}}</ion-label>
+                  </ion-list-header>
+                  <ion-item  color="primary">
+                    <ion-label style="height: 100px" color="medium"></ion-label>
+                    <ion-text color="light">
+                        <h5 style="line-height: 1.3">{{jezik.na_nasoj_web}}</h5>
+                      </ion-text>
+                  </ion-item>
+                  <div style="width:180px;margin:0 auto;">
+                    <ion-button (click)="openWeb()" expand="block" color="danger">{{jezik.Posjeti_stranicu}}</ion-button>
+                  </div>
+                </ion-radio-group>
+          </div>
+
+          <div class=card_content>
+              <ion-radio-group>
+                  <ion-list-header color="primary">
+                    <ion-label>{{jezik.Doprinos}}</ion-label>
+                  </ion-list-header>
+                  <ion-item  color="primary">
+                    <ion-text color="light">
+                        <h5 style="line-height: 1.3">{{jezik.nasa_apk}}</h5>
+                      </ion-text>
+                  </ion-item>
+                  <div style="width:100px;margin:0 auto;">
+                    <ion-button (click)="OpenDonate()" expand="block" color="danger">{{jezik.Doniraj}}</ion-button>
+                  </div>
+                </ion-radio-group>
+          </div>
+          <div class=card_content>
+            <ion-radio-group>
+                <ion-list-header color="primary">
+                  <ion-label>{{jezik.Posalji_nam_email}}</ion-label>
+                </ion-list-header>
+                <ion-item  color="primary">
+                  <ion-text color="light">
+                      <h5 style="line-height: 1.3">{{jezik.slobodno_nam_posalji}}</h5>
+                    </ion-text>
+                </ion-item>
+                <div (click)="sendEmail()" style="width:180px;margin:0 auto;">
+                  <ion-button expand="block" color="danger">{{jezik.Posalji_mail}}</ion-button>
+                </div>
+              </ion-radio-group>
+          </div>
+          <div class=card_content>
+            <ion-radio-group>
+                <ion-list-header color="primary">
+                  <ion-label>{{jezik.Pravila_koristenja}}</ion-label>
+                </ion-list-header>
+                <ion-item  color="primary">
+                  <ion-text color="light">
+                      <h5 style="line-height: 1.3">{{jezik.procitaj_pravila}}</h5>
+                    </ion-text>
+                </ion-item>
+                <div style="width:100px;margin:0 auto;" (click)="openTerms()">
+                  <ion-button expand="block" color="danger">{{jezik.Procitaj}}</ion-button>
+                </div>
+              </ion-radio-group>
+            </div>
+
+            <div style="border-bottom: 0px;" class=card_content>
+              <ion-radio-group>
+                  <ion-list-header color="primary">
+                    <ion-label>{{jezik.Verzija_aplikacije}}</ion-label>
+                  </ion-list-header>
+                  <ion-item  color="primary">
+                    <ion-text color="light">
+                        <h5 style="line-height: 1.3">{{jezik.trenutna_apk}}</h5>
+                      </ion-text>
+                  </ion-item>
+                  <div  style="width:100px;margin:0 auto;" (click)="checkVer()">
+                    <ion-button (click)="openVersion()" expand="block" color="danger">{{jezik.Provjeri}}</ion-button>
+                  </div>
+                </ion-radio-group>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+  </ion-content>

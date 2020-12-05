@@ -1,0 +1,117 @@
+<ion-header>
+    <ion-toolbar class="dark_theme" color="dark">
+      <ion-buttons slot="start" (click)="goBack()">
+        <ion-icon style="transform: rotate(180deg);margin-left: 12px;" name="play" color="danger" slot="start"></ion-icon>
+      </ion-buttons>
+      <ion-title color="danger">
+        Admin
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content class="dark_theme" style="margin-top:0; padding-top:0px;">
+<div id="background_color" style="padding-top:15px">
+
+
+  <div id="pass_ID" class="input" style="margin-top:0px">
+    <ion-input  [(ngModel)]="uniqeID" (ionChange)="ProvjeriUnos(uniqeID)" color="danger" placeholder="*************" type="password"></ion-input>
+  </div>
+
+<div id="post_allow" style="display: none;">
+  <div  *ngFor="let post of Posts">
+      <div class="card_box">
+    <div class="image">
+        <img src={{post.imageURL}}>
+    </div>
+    <p style="text-align: center;
+        font-size: 17px;margin-top: 3px;margin-bottom:7px; font-family: 'Comic Sans MS';">
+        {{post.drzava}} - {{post.regija}}
+    </p>
+    <p style=" margin: 0px;text-align: center;
+        font-size: 14px; font-family: 'Comic Sans MS';">
+        {{post.lokacija}}
+    </p>
+    <div class="description">
+            <p style="margin-top: 8px;">
+              {{post.description}}  -  Događaj iz dana {{post.datum}} u {{post.vrijeme}}.</p>    
+    </div>
+    <div  class="footer">
+        <div class="footer_button"  style="border-left:0px;">
+            <div class="icon_position" >
+                <img src="{{post.like_image}}">
+            </div>
+            <p id="like_color">{{post.likes}}</p>
+        </div>
+
+        <div class="footer_button">
+            <div class="icon_position">
+                    <img src="{{post.comment_image}}">
+                </div>
+            <p>Napiši komentar</p>
+        </div>
+        <div class="footer_button">
+            <div class="icon_position">
+                    <img src="{{post.share_image}}">
+            </div>
+            <p>Podjeli</p>
+        </div>
+
+    </div>
+    <div style="width: 100%">
+        <div style="width:48%;float:left;margin:0">
+          <ion-button (click)="Objavi('xx')" expand="block" color="danger">Zabrani</ion-button>
+        </div>
+        <div style="width:48%;float:right;margin:0">
+          <ion-button (click)="Objavi('ye')" expand="block" color="danger">Objavi</ion-button>
+        </div>
+      </div>
+</div>
+
+</div>
+</div>
+
+
+<div id="instagram_share_div" style="display:none;margin-top: 30px;">
+  <ion-input color="light" (ionChange)="changeLink(test_input)" [(ngModel)]="test_input" placeholder="     Unesi share link"></ion-input>
+  <div style="width:100%;margin:0;margin-bottom: 15px;">
+    <ion-button expand="block" (click)="goToUrl()" color="danger">Uvezi kod</ion-button>
+    </div>
+  <ion-item (click)="ChooseCountryAlert()" color="primary">
+      <ion-label id="drzava_label_id" color="light">Izaberi državu</ion-label>
+  </ion-item>
+
+  <div id="region_filter_1" style="display:block">
+      <ion-item (click)="ChooseZupanijeAlert()" color="primary">
+          <ion-label id="regija_hrv_id" color="light">Izaberi grad</ion-label>
+      </ion-item>
+  </div>
+  <div id="region_filter_2" style="display:block">
+    <ion-item (click)="ChooseDeloveAlert()" color="primary">
+        <ion-label id="regija_srb_id"  color="light">Izaberi grad</ion-label>
+    </ion-item>
+  </div>
+  <div id="region_filter_3" style="display:block">
+    <ion-item (click)="ChooseRegioniAlert()"  color="primary">
+        <ion-label id="regija_bih_id"  color="light">Izaberi grad</ion-label>
+    </ion-item>
+  </div>
+  <ion-item>
+  <ion-textarea color="light" rows="4" (ionChange)="changeJson(test_json)" [(ngModel)]="test_json" placeholder="Unesi cijeli kod s linka"></ion-textarea>
+  </ion-item>
+  <div style="width:100%;margin:0">
+  <ion-button expand="block" (click)="GetAvailableId()" color="danger">Napravi Objavu od koda</ion-button>
+  </div>
+</div>
+
+
+<div id="delete_post_div" style="display:none;margin-top: 30px;">
+  <ion-input color="light" (ionChange)="changeID(deleteID)" [(ngModel)]="deleteID" placeholder="     Unesi broj objave"></ion-input>
+  <div style="width:100%;margin:0;margin-bottom: 15px;">
+    <ion-button expand="block" (click)="deletePost()" color="danger">Obriši objavu</ion-button>
+    </div>
+</div>
+
+
+  </div> 
+</ion-content>

@@ -1,0 +1,355 @@
+
+
+<ion-header class="dark_theme">
+  <ion-toolbar color="primary" class="toolbar_border">
+    <ion-buttons slot="start" >
+      <ion-menu-button color="danger"></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+        <ion-button style="display: none;" (click)="openSearch()">
+            <ion-icon style="font-size: 25px;" color="danger" slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+
+        <ion-button id="notif_div" style="padding-right: 5px" (click)="OpenChat()">
+            <ion-icon id="notif_id" style="font-size: 31px;" color="danger" name="ios-mail"></ion-icon>
+        </ion-button>
+        <ion-button (click)="openCamera()">
+            <ion-icon style="font-size: 27px;" color="danger" name="camera"></ion-icon>
+        </ion-button>
+        <ion-button (click)="PreloadPosts()">
+            <ion-icon style="font-size: 25px;" color="danger" slot="icon-only" name="ios-refresh"></ion-icon>
+        </ion-button>
+        <ion-button (click)="openFilters()">
+            <ion-icon style="font-size: 25px;" color="danger" slot="icon-only" name="md-options"></ion-icon>
+        </ion-button>
+
+    </ion-buttons>
+
+
+   
+  </ion-toolbar>
+</ion-header>
+
+<div scrollY="true" scrollX="true" style="display:none;height: 200px;overflow: scroll;">
+    <img style="width: 1000px !important;" src="https://upload.wikimedia.org/wikipedia/commons/6/68/Big_rhodesian_male_IMG_6830.JPG">
+
+</div>
+
+
+<ion-content style="margin-top:0; padding-top:0px;">
+    <div class="dark_theme" id="background_color">
+
+
+
+    <ion-textarea style="display:none" rows="8" class="textAREA" placeholder="Unesite instagram API private..." (ionChange)="getFirstPosts(test)" [(ngModel)]="test"></ion-textarea>
+
+
+
+
+  <div id="background_padding"></div>
+  <div class="card_border">
+  <div id="header_nwepost" class="card">
+      <div class="toolbar_icons">
+          <div id="post_button1" style="margin-top:0px" (click)="createPost()">
+            <div style="width:96%;height: 45px;margin:0 auto;">
+                <ion-button size="small" expand="block" color="danger">{{jezik.Objavi}}</ion-button>
+            </div>
+        </div>
+          <div class="obavezne_stavke">
+                <p>{{jezik.Obavezne_stavke_su}}</p>
+                <div class="obavezne_stavke_check">
+                    <ion-icon id="check1" style="margin-left:15px;float:left;font-size: 12px;text-align: center;" color="medium" name="md-checkmark"></ion-icon>
+                    <p id="check1p">{{jezik.Fotografija_ili_opis}}</p>
+                </div>
+                <div class="obavezne_stavke_check">
+                    <ion-icon id="check2"  style="margin-left:15px;float:left;font-size: 12px;text-align: center;" color="medium" name="md-checkmark"></ion-icon>
+                    <p id="check2p" >{{jezik.Odabir_mjesta}}</p>
+                </div>
+              </div>
+      </div>
+  
+
+        <div id="image_picker" style="display: none"> 
+            <ion-button style="width:48%;float:left;" color="danger" (click)="openCamera()">
+                    <ion-icon style="margin-right:10px;font-size: 25px;" color="light" slot="icon-only" name="ios-camera"></ion-icon>
+                {{jezik.Kamera}}</ion-button>
+            <ion-button style="width:48%;float:right;" color="danger" (click)="openGallery()">
+                    <ion-icon style="margin-right:10px;font-size: 25px;" color="light" slot="icon-only" name="md-images"></ion-icon>
+                {{jezik.Galerija}}</ion-button>
+            <img *ngIf="imageToShow.length > 3" style="width:90px;height: 130px;margin:0 auto;" src="{{imageToShow}}">
+            <p *ngIf="imageToShow.length > 3" style="height: 20px;margin-bottom: 0px;color:grey;margin-top: 0px;">*ovaj prikaz nije u originalnim dimenzijama te služi kao primjer </p>
+        </div>
+
+        <div id="ui_picker_id" class="UI_picker" style="display: none;">
+            <div class="UI_spliter">
+                <p style="margin-top:5px;text-align:center;margin-bottom:4px;">{{jezik.Like}}</p>
+                <div class="UI_undersplitter">
+                    <div id="lb1" (click)="ChangeLikeButton(1)" class="UI_image" style="background-image: url('../../assets/images/emoji/like1.png');">
+                    </div>
+                </div>
+                <div class="UI_undersplitter">
+                        <div id="lb2" (click)="ChangeLikeButton(2)" class="UI_image" style="background-image: url('../../assets/images/emoji/like2e.png');">
+
+                    </div>
+                </div>
+                <div class="UI_undersplitter">
+                        <div id="lb3" (click)="ChangeLikeButton(3)" class="UI_image" style="background-image: url('../../assets/images/emoji/like3e.png');">
+
+                    </div>
+                </div>
+                <div class="UI_undersplitter">
+                        <div id="lb4" (click)="ChangeLikeButton(4)" class="UI_image" style="background-image: url('../../assets/images/emoji/like4e.png');">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="UI_spliter">
+                <p style="margin-top:5px;text-align:center;margin-bottom:4px;">{{jezik.Komentar}}</p>
+                <div class="UI_undersplitter">
+                    <div id="cb1" (click)="ChangeCommentButton(1)" class="UI_image" style="background-image: url('../../assets/images/emoji/comment1.png');">
+                    </div>
+                </div>
+                <div  class="UI_undersplitter">
+                    <div id="cb2" (click)="ChangeCommentButton(2)" class="UI_image" style="background-image: url('../../assets/images/emoji/comment2e.png');">
+                    </div>
+                </div>
+                <div class="UI_undersplitter">
+                    <div id="cb3" (click)="ChangeCommentButton(3)"  class="UI_image" style="background-image: url('../../assets/images/emoji/comment3e.png');">
+                    </div>
+                </div>
+                <div class="UI_undersplitter">
+                    <div  id="cb4" (click)="ChangeCommentButton(4)"  class="UI_image" style="background-image: url('../../assets/images/emoji/comment4e.png');">
+                    </div>
+                </div>
+            </div>
+            <div style="border-bottom: 0px;" class="UI_spliter">
+                <p style="margin-top:5px;text-align:center;margin-bottom:4px;">{{jezik.Podijeli}}</p>
+                <div class="UI_undersplitter">
+                    <div id="sb1" (click)="ChangeShareButton(1)"  class="UI_image" style="background-image: url('../../assets/images/emoji/share1.png')">
+                    </div>
+                </div>
+                <div class="UI_undersplitter">
+                    <div id="sb2" (click)="ChangeShareButton(2)"  class="UI_image" style="background-image: url('../../assets/images/emoji/share2e.png')">
+                    </div>
+                </div>
+                <div class="UI_undersplitter">
+                    <div id="sb3" (click)="ChangeShareButton(3)"  class="UI_image" style="background-image: url('../../assets/images/emoji/share3e.png')">
+                    </div>
+                </div>
+                <div class="UI_undersplitter">
+                    <div id="sb4" (click)="ChangeShareButton(4)"  class="UI_image" style="background-image: url('../../assets/images/emoji/share4e.png')">
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+      <div id="date_time_picker" style="  width: 90%;
+      margin:0 auto;display:none">
+          <div class="time_picker" style="margin-top: 12px;" color="danger">
+              <ion-item color="primary">
+                  <ion-label color="light">{{jezik.Kad}}</ion-label>
+                  <ion-datetime (click)="AlertChangeColorPicker()" displayFormat="D/M YYYY"
+                  [(ngModel)]="selectDate" (ionChange)="dateFilter(selectDate)"
+                  dayValues="31,30,29,28,27,26,25,24,23,22,21,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1"
+                  monthValues="12,11,10,9,8,7,6,5,4,3,2,1"
+                  yearValues="2020,2019,2018,2017"
+                  color="dark"
+                  ></ion-datetime>
+              </ion-item>
+              <ion-item color="primary" >
+                    <ion-label color="light">{{jezik.U_koliko}}</ion-label>
+                    <ion-datetime (click)="AlertChangeColorPicker()"
+                    [(ngModel)]="selectTime" (ionChange)="timeFilter(selectTime)"
+                    displayFormat="HH : mm"
+                    minuteValues="45,30,15,00"
+                    color="danger"
+                    ></ion-datetime>
+                </ion-item>
+          </div>      
+      </div> 
+  
+      <div id="region_select" style="display: none;">
+          <ion-item (click)="ChooseCountryAlert()" color="primary">
+              <ion-label id="drzava_label_id" color="light">{{jezik.Izaberi_drzavu}}</ion-label>
+          </ion-item>
+  
+
+
+
+
+          <div id="region_filter_1" style="display:none">
+              <ion-item (click)="ChooseZupanijeAlert()" color="primary">
+                  <ion-label id="regija_hrv_id" color="light">{{jezik.Izaberi_grad}}</ion-label>
+              </ion-item>
+          </div>
+          <div id="region_filter_2" style="display:none">
+            <ion-item (click)="ChooseDeloveAlert()" color="primary">
+                <ion-label id="regija_srb_id"  color="light">{{jezik.Izaberi_grad}}</ion-label>
+            </ion-item>
+        </div>
+        <div id="region_filter_3" style="display:none">
+            <ion-item (click)="ChooseRegioniAlert()"  color="primary">
+                <ion-label id="regija_bih_id"  color="light">{{jezik.Izaberi_grad}}</ion-label>
+            </ion-item>
+        </div>
+  
+
+
+
+
+
+          <ion-item color="primary">
+              <ion-input color="tertiary" (ionChange)="lokacijaFilter(selectLokaciju)" [(ngModel)]="selectLokaciju" placeholder={{jezik.Unesite_detaljnije_mjesto}}></ion-input>
+          </ion-item>
+      </div>
+      <div style="width: 90%;margin: 0 auto;">
+        <ion-item style="height:210px" id="text_area">
+            <ion-textarea rows="8" class="textAREA" placeholder="{{jezik.Unesite_informacije_o_dogadaju}}" (ionChange)="infoFilter(selectInfo)" [(ngModel)]="selectInfo"></ion-textarea>
+        </ion-item>
+      </div>
+      <div class="footer_icons_p" id="footer_icons">
+            <div (click)="chooseDesc()" style="margin-left: 0px;" class="footer_buttons">
+            <div style="width: 100%;height: 60%;margin:0px;">
+                <ion-icon id="ion_icon_5" style="font-size: 25px;text-align: center;" color="danger" name="md-create"></ion-icon>
+            </div>
+            <div style="width: 100%;height: 40%;margin:0px;">
+                <p  style=" font-size: 13px;margin-bottom:0px;margin-top:0px;text-align: center;">{{jezik.Opis}}</p>
+            </div>
+            </div>
+
+          <div (click)="chooseFile()" style="margin-left: 0px;" class="footer_buttons">
+            <div style="width: 100%;height: 60%;margin:0px;">
+                    <ion-icon id="ion_icon_2" style="font-size: 25px;text-align: center;" color="light" name="md-images"></ion-icon>
+            </div>
+            <div style="width: 100%;height: 40%;margin:0px;">
+                <p style=" font-size: 13px;margin-bottom:0px;margin-top:0px;text-align: center;">{{jezik.Fotografija}}</p>
+          </div>
+            </div>
+
+            <div (click)="chooseWhere()" style="margin-left: 0px;" class="footer_buttons">
+            <div style="width: 100%;height: 60%;margin:0px;">
+                <ion-icon id="ion_icon_1" style="font-size: 25px;text-align: center;" color="light" name="md-pin"></ion-icon>
+            </div>
+            <div style="width: 100%;height: 40%;margin:0px;">
+                <p style=" font-size: 13px;margin-bottom:0px;margin-top:0px;text-align: center;">{{jezik.Mjesto}}</p>
+            </div>
+            </div>
+
+            <div (click)="chooseTime()" style="margin-left: 0px;" class="footer_buttons">
+            <div style="width: 100%;height: 60%;margin:0px;">
+                <ion-icon id="ion_icon_3" style="font-size: 25px;text-align: center;" color="light" name="md-calendar"></ion-icon>
+            </div>
+            <div  style="width: 100%;height: 40%;margin:0px;">
+                <p style="font-size: 13px;margin-bottom:0px;margin-top:0px;text-align: center;">{{jezik.Datum}}</p>
+            </div>
+            </div>
+            <div (click)="chooseUI()" style="margin-left: 0px;" class="footer_buttons">
+            <div style="width: 100%;height: 60%;margin:0px;">
+                <ion-icon id="ion_icon_4" style="transform: rotate(270deg);font-size: 25px;text-align: center;" color="light" name="ios-build"></ion-icon>
+            </div>
+            <div style="width: 100%;height: 40%;margin:0px;">
+                <p id="izgled" style=" font-size: 13px;margin-bottom:0px;margin-top:0px;text-align: center;">{{jezik.Izgled}}</p>
+            </div>
+            </div>
+
+      </div>
+  
+  
+ 
+      
+      
+  </div>
+
+</div>
+
+
+<div id="space_line" style="margin-top: 7px;"></div>
+<div  id="{{post.id}}_div" class="post_p" *ngFor="let post of Posts">
+        <div  class="card_box">
+            <div style="position: absolute;right: 0px;height: 1px;width:1px;"> 
+                <ion-fab style="margin-top:-10px;margin-right: -10px;" color="danger" horizontal="end" vertical="top" slot="fixed">
+                    <ion-fab-button class="neki_div" color="danger" size="small">
+                      <ion-icon  name="settings"></ion-icon>
+                    </ion-fab-button>
+                    <ion-fab-list>
+                        <div (click)="PrijaviObjavu(post.id)" class="fab_list">
+                            <div class="fab_div" >Prijavi objavu</div>
+                        </div>
+                        <div (click)="SakrijObjavu(post.id)" class="fab_list">
+                            <div class="fab_div" >Sakrij objavu</div>
+                        </div>
+                        <div (click)="PosaljiPoruku(post.id)" class="fab_list">
+                            <div class="fab_div" >Pošalji poruku</div>
+                        </div>
+                    </ion-fab-list>
+                </ion-fab>
+            </div>
+
+
+        <div  style="position: relative; width: 0; height: 0;left: 50%;">
+            <div id="{{post.id}}_fastLike" class="fastLikeImage"></div>
+        </div>
+
+
+
+        <div (click)="QuickLike(post.id)" class="image">
+            <img src={{post.imageURL}}>
+        </div>
+        <p style="text-align: center;
+            font-size: 17px;margin-top: 3px;margin-bottom:7px; font-family: 'Comic Sans MS';">
+            {{post.drzava}} - {{post.regija}}
+        </p>
+        <p style=" margin: 0px;text-align: center;
+        font-size: 14px; font-family: 'Comic Sans MS';">
+            {{post.lokacija}}
+        </p>
+        <div class="description">
+            <p (click)="OpenFullPost(post.id)" style="margin-top: 8px;">
+                {{post.description}}  -  Događaj iz dana {{post.datum}} u {{post.vrijeme}}. Pritisnite za više...</p>
+        </div>
+        <div  class="footer">
+            <div class="footer_button"  (click)="LikePost(post.id)" style="border-left:0px;">
+                <div class="icon_position" >
+                    <img src="{{post.like_image}}">
+                </div>
+                <p style="color:red" *ngIf="getIsPostWithIdLiked(post.id)" id="{{post.id}}">{{post.BonusLikeTag()}}</p>
+                <p *ngIf="!getIsPostWithIdLiked(post.id)" id="{{post.id}}">{{post.likes}}</p>
+            </div>
+
+            <div (click)="OpenFullPost(post.id)" class="footer_button">
+                <div class="icon_position" >
+                    <img src="{{post.comment_image}}">
+                </div>
+                <p>{{jezik.Komentiraj}}</p>
+            </div>
+            <div (click)="OpenShare(post.id)" class="footer_button">
+
+                <div class="icon_position">
+                        <img src="{{post.share_image}}">
+                </div>
+                <p>{{jezik.Podijeli}}</p>
+            </div>
+
+        </div>
+    </div>
+    <div id="space_line"></div>
+
+
+
+
+</div>
+<div id="inf_spinner" class="inf_loader">
+        <ion-infinite-scroll threshold="50px" (ionInfinite)="loadData($event)">
+           <div id="spinnder_inf" style="margin:0 auto;width: 40px;height: 40px;;">
+                   <ion-spinner color="danger" name="lines"></ion-spinner>
+           </div>
+       </ion-infinite-scroll>
+   </div>
+
+  
+</div>
+
+
+</ion-content>

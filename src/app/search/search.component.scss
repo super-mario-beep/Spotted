@@ -1,0 +1,34 @@
+#background_color{
+  background-color: rgb(40,40,40);
+  padding:0;
+  margin:0 auto;
+  padding-top: 7px;
+  padding-bottom: 12px;
+}
+
+
+.card{
+width: 94%;
+background-color: black;
+border-radius: 12px;
+margin: 12px auto;
+padding-top: 7px;
+border-bottom: 1px solid red;
+border-right: 1px solid red;
+}
+.card_content{
+width: 90%;
+background-color: black;
+margin:2px auto;
+margin-bottom: 10px;
+border-bottom: 1px solid red;
+padding-bottom: 3px;
+
+}
+.locked{
+font-size: 20px;
+margin-right: 10px;
+}
+.card_content h5{
+margin:0;
+}

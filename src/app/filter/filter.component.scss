@@ -1,0 +1,63 @@
+
+.dark_theme{
+    #background_color{
+        background-color: rgb(40,40,40);
+        padding:10px 0px;
+        margin:0 auto;
+        height: 100%;
+    }
+    
+    
+    
+    .card{
+        width: 92%;
+        background-color: rgb(24,24,24);
+        margin:10px auto;
+        border-radius: 15px;
+        padding: 5px;
+        padding-top: 10px;   
+        border-bottom: 1px solid red;
+        border-right: 1px solid red;
+    
+    }
+}
+
+.light_theme{
+    #background_color{
+        background-color: rgb(241,241,241);
+        padding:10px 0px;
+        margin:0 auto;
+        height: 100%;
+    }
+    
+    
+    
+    .card{
+        width: 92%;
+        background-color: white;
+        margin:10px auto;
+        border-radius: 15px;
+        padding: 5px;
+        padding-top: 10px;   
+        border-bottom: 1px solid lightgreen;
+        border-right: 1px solid lightgreen;
+    
+    }
+
+    --ion-color-medium: white;
+    --ion-color-light: black;
+    --ion-color-danger: rgb(59, 248, 156);
+
+    --ion-color-primary: white;
+    --ion-color-primary-contrast: black;
+
+    --ion-color-primary-shade: white;
+    --ion-color-primary-tint: white;
+
+    --ion-color-danger-contrast: black;
+    --ion-color-danger-shade: rgb(4, 154, 81);
+    --ion-color-danger-tint: rgb(0, 138, 72);
+  
+
+}
+

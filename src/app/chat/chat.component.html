@@ -1,0 +1,115 @@
+<ion-header id="header_chat_ion" class="dark_theme">
+    <ion-toolbar id="header_messages_ion" color="primary">
+      <ion-buttons (click)="goback()" slot="start" >
+        <ion-icon style="transform: rotate(180deg);margin-left: 12px;" name="play" color="danger" slot="start"></ion-icon>
+      </ion-buttons>
+      <ion-buttons id="create_new_mess_tl" (click)="OpenNewMessage()" slot="end" >
+        <ion-icon style="font-size: 25px;" name="create" color="danger" slot="start"></ion-icon>
+      </ion-buttons>
+      <ion-title  id="head_line_chat" color="danger">
+        Chat
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div id="new_message_div" class="dark_theme" style="display: none;">
+    <div id="new_mess_div_id" class="poruka_div">
+      <div class="background_message_div">
+        <ion-textarea (ionFocus)="onFocus()" (focusout)="onFocusOut()" style="border-radius: 8px;width: 90%;margin:0 auto;display:block;background-color: snow;" rows="1" placeholder="   Unesite korisnika npr. 1258745" (ionChange)="ChangeId(user_id)" [(ngModel)]="user_id"></ion-textarea>
+      </div>
+    </div>
+    <div style="height:40px;width:90%;margin:6px auto;">
+      <div  class="textaera_div_message" >
+        <ion-textarea id="text_area_ion_new_mess" color="dark" style="margin:0px;height:36px;background-color:snow;color:black" rows="1" placeholder="Unesite poruku..." (ionChange)="ChangeMessage(message)" [(ngModel)]="message"></ion-textarea>
+      </div>
+      <div style="float: right;width: 13%;height: 40px;">
+        <div (click)="CheckNode()" class="send_message">
+          <ion-icon class="send_icon" name="md-send"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div id="backgound_keyboard_hidden" class="keyboard_hidden_background"  >
+    </div>
+  </div>
+
+    <div id="filter_content_id" class="dark_theme" style="display:block;height: 100%;margin-top:0;">
+        <div id="background_color">
+            <div class="card_box">
+                <ion-segment  id="segment_id_mess" class="segment_div" color="danger">
+                    <ion-segment-button id="seg1" (click)="ChangeSegment(1)"  value="sunny" checked>
+                      <ion-label style="font-weight: bold;" color="light" >Poruke</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button id="seg2" (click)="ChangeSegment(2)" value="rainy">
+                      <ion-label style="font-weight: bold;"  color="light">Obavijesti</ion-label>
+                    </ion-segment-button>
+                  </ion-segment>
+
+                  
+
+
+
+                  <div id="chat_menu"  style="display: none;">
+                    <ion-content id="content_div_messages" class="poruka_div">
+                      <div class="background_message_div">
+                        <div *ngFor="let poruka of mess">
+                          <div id="mess{{poruka.GetSender()}}" class="message_box">
+                            <p class="mess_p">{{poruka.GetMessage()}}</p>
+                            <p class="mess_time">{{poruka.GetTime()}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </ion-content>
+
+                      <div id="enter_mess" style="height:40px;width:90%;margin:6px auto;">
+                        <div class="textaera_div_message">
+                          <ion-textarea id="text_area_ion_new_mess" color="dark" style="margin:0px;height:36px;background-color: snow;color:black;" rows="1" placeholder="Unesite poruku..." (ionChange)="ChangeMessNew(MessNew)" [(ngModel)]="MessNew"></ion-textarea>
+                        </div>
+
+                        <div style="float: right;width: 13%;height: 40px;">
+                          <div (click)="AddMessageInJson()" class="send_message">
+                            <ion-icon class="send_icon" name="md-send"></ion-icon>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div id="add_new_ess_background" class="keyboard_hidden_background" ></div>
+                  </div>
+
+                <ion-content color="dark" class="content_mess">
+                  <ion-refresher id="refresher_id" (ionRefresh)="doRefresh($event)" slot="fixed" pullFactor="0.6" pullMin="30" pullMax="70">
+                    <ion-refresher-content>
+                    </ion-refresher-content>
+                  </ion-refresher>
+                  <div id="spinnder_infL" style="display:none;margin:0 auto;;width: 40px;height: 40px;margin-top:4px;">
+                    <ion-spinner color="danger" name="lines"></ion-spinner>
+                  </div>
+                  <div id="poruke_div_id" style="display: block;">
+                    <div class="ne_mess_new" *ngIf="1 > Poruke.length">Nažalost, nemate još poruka.</div>
+                    <div class="message_div"  *ngFor="let poruka of Poruke" (click)="CreateMessages(poruka)">
+                        <img class="imgsvrlja" src="{{poruka.node_img}}">
+                        <div  style="height: 20px;padding-top:4px;margin-bottom: 4px;">
+                            <span class="name_div">#{{poruka.user2}}</span>
+                            <span class="date_div">{{poruka.date}}</span>
+                        </div>
+                        <span *ngIf="poruka.seen_user" class="span_new_mess">Nova poruka: </span>
+                        <span  class="message">{{poruka.short_code}}</span>
+                    </div>
+                  </div>
+                  <div id="obavjesti_div_id" style="display: none;">
+                    <div class="ne_mess_new" *ngIf="1 > Obavjesti.length">Nažalost, nemamo obavijesti za Vas.</div>
+                    <div class="message_div"  *ngFor="let poruka of Obavjesti">
+                      <img class="imgsvrlja" src="{{poruka.node_img}}">
+                      <div (click)="CreateMessages(poruka)" style="height: 20px;padding-top:4px;margin-bottom: 4px;">
+                          <span class="name_div">Spotted Obavijest</span>
+                          <span class="date_div">{{poruka.date}}</span>
+                      </div>
+                      <span *ngIf="poruka.seen_user" class="span_new_mess">Nova obavijest: </span>
+                      <span  class="message">{{poruka.short_code}}</span>
+                    </div>
+                  </div>
+
+                </ion-content>
+            </div>
+        </div>
+      </div>

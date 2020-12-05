@@ -1,0 +1,123 @@
+
+.dark_theme{
+  #background_color{
+      background-color: rgb(40,40,40);
+      padding:0;
+      margin:0 auto;
+      padding-top: 7px;
+      padding-bottom: 12px;
+      min-height: 100%;
+    }
+
+  .card{
+    width: 100%;
+    background-color: rgb(24,24,24);
+    border-radius: 12px;
+    margin: 0px auto;
+    padding-top: 7px;
+    border-bottom: 1px solid rgb(24,24,24);
+    //border-right: 1px solid red;
+  }
+
+  .card_border{
+    border-radius: 12px;
+    padding: 1.5px;
+    width: 94%;
+    margin:12px auto;
+    background-image: linear-gradient(to bottom right, coral,red, coral);
+
+
+  }
+  .card_content{
+    width: 90%;
+    background-color: rgb(24,24,24);
+    margin:2px auto;
+    margin-bottom: 10px;
+    border-bottom: 1px solid red;
+    padding-bottom: 3px;
+
+  }
+  .locked{
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .card_content h5{
+    margin:0;
+  }
+  #head_line{
+    border-bottom: 1px solid red;
+  }
+}
+
+
+
+
+
+
+
+.light_theme{
+  #background_color{
+      background-color: rgb(242, 242, 242);
+      padding:0;
+      margin:0 auto;
+      padding-top: 7px;
+      padding-bottom: 12px;
+      min-height: 100%;
+    }
+
+  .card{
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    margin: 0px auto;
+    padding-top: 7px;
+    border-bottom: 1px solid white;
+    //border-right: 1px solid red;
+  }
+
+  .card_border{
+    border-radius: 12px;
+    padding: 1.5px;
+    width: 94%;
+    margin:12px auto;
+    background-image: linear-gradient(to bottom right, rgb(0, 246, 250),rgb(5, 201, 50), rgb(0, 246, 250));
+    //background-image: linear-gradient(to bottom right, coral,red, coral);
+
+
+  }
+  .card_content{
+    width: 90%;
+    background-color: white;
+    margin:2px auto;
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgreen;
+    padding-bottom: 3px;
+
+  }
+  .locked{
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .card_content h5{
+    margin:0;
+  }
+  #head_line{
+    border-bottom: 1px solid lightgreen;
+  }
+
+  --ion-color-medium: white;
+  --ion-color-light: black;
+  --ion-color-danger: rgb(59, 248, 156);
+
+  --ion-color-primary: white;
+  --ion-color-primary-contrast: black;
+
+  --ion-color-primary-shade: white;
+  --ion-color-primary-tint: white;
+
+  --ion-color-danger-contrast: rgb(57, 57, 57);
+  --ion-color-danger-shade: rgb(4, 154, 81);
+  --ion-color-danger-tint: rgb(0, 138, 72);
+
+}
+

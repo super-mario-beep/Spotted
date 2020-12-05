@@ -1,0 +1,54 @@
+<ion-header class="dark_theme">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start" (click)="goBack()">
+        <ion-icon style="transform: rotate(180deg);margin-left: 12px;" name="play" color="danger" slot="start"></ion-icon>
+      </ion-buttons>
+      <ion-title  id="head_line" color="danger">
+        {{jezik.Filteri}}
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content id="filter_content_id" class="dark_theme" style="margin-top:0; padding-top:0px;">
+      <div id="background_color">
+
+        <div class="card">
+          <ion-list style="padding-top: 0px;padding-bottom:0px">
+              <ion-list-header color="primary">{{jezik.Po_drzavi}}</ion-list-header>
+                <ion-item  (click)="filterDrzavaHrv()" color="primary">
+                  <ion-checkbox color="danger" checked slot="start"></ion-checkbox>
+                  <ion-label color="danger">{{jezik.Hrvatska}}</ion-label>
+                </ion-item>
+                <!--    <ion-item  (click)="filterDrzavaSrb()" color="primary">
+                  <ion-checkbox color="danger" checked slot="start"></ion-checkbox>
+                  <ion-label color="danger">{{jezik.Srbija}}</ion-label>
+                </ion-item>
+                <ion-item (click)="filterDrzavaBih()" color="primary">
+                  <ion-checkbox color="danger" checked slot="start"></ion-checkbox>
+                  <ion-label color="danger">{{jezik.Bosna_i_Hercegovina}}</ion-label>
+                </ion-item>       -->
+              </ion-list>
+        </div>
+
+        <div id="regije_display" class="card" style="padding-bottom: 30px;">
+            <ion-list-header color="primary">{{jezik.Po_gradovima}}</ion-list-header>
+            <div style="width:90%;margin:0 auto;">
+            <ion-item id="displayhrv"  color="primary">
+                <ion-label (click)="ChooseZupanijeAlert()" >{{jezik.Hrvatska}} - {{jezik.gradovi}}</ion-label>
+              </ion-item>
+            <!--      <ion-item id="displaysrb"  color="primary">
+                <ion-label (click)="ChooseDeloveAlert()" >{{jezik.Srbija}} - {{jezik.gradovi}}</ion-label>
+              </ion-item>
+              <ion-item id="displaybih" color="primary">
+                  <ion-label (click)="ChooseRegioniAlert()">{{jezik.BiH}} - {{jezik.gradovi}}</ion-label>
+                </ion-item>     -->
+          </div>
+        </div>
+        <div (click)="Filtriraj()" style="width: 140px;height: 45px;margin:0 auto;">
+          <ion-button expand="block" color="danger">{{jezik.Promjeni_filter}}</ion-button>
+        </div>
+
+
+      </div>
+  </ion-content>

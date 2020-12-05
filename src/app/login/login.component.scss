@@ -1,0 +1,69 @@
+#background_id{
+    width: 100%;
+    min-height: 100%;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 1.1s ease-in-out;
+    background-attachment: fixed;
+    min-height: 800px;
+    margin-bottom: 0px;
+    background-image: url("../../assets/images/login/login_image1.png");
+
+
+}
+.main_div{
+    background-color: rgba($color: rgb(24,24,24), $alpha: 0.85);
+    width: 80%;
+    margin: 30px auto;
+    max-width: 500px;
+
+
+}
+#segmet{
+    width:60%;
+    margin: 0 auto;
+}
+h4{
+    text-align: center;
+    color:gray;
+    font-weight: bold;
+    padding-top: 7px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+}
+h5{
+    text-align: center;
+    color:lightgray;
+    padding-top: 5px;
+}
+.danger_colorer{
+    color:#f25454;
+}
+h6{
+    text-align: center;
+    color:lightgray;
+    padding-top: 5px;
+    font-size: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.input{
+    width: 80%;
+    height: 38px;
+    margin: 13px auto;
+    border: 1px solid gray;
+}
+.button{
+    width: 140px;
+    height: 35px;
+    margin: 8px auto;
+}
+u{
+   color:white;
+}
+

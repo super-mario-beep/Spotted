@@ -1,0 +1,92 @@
+<ion-header>
+    <ion-toolbar color="dark" style="border-bottom:1px solid red;">
+      <ion-buttons slot="start" >
+        <ion-menu-button color="danger"></ion-menu-button>
+      </ion-buttons>
+      <ion-title  id="head_line" color="danger">
+        Pretraži
+      </ion-title>
+
+
+  
+  
+      <div class="line"></div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content style="margin-top:0; padding-top:0px;">
+      <div id="background_color">
+        <div class="card">
+            <div class=card_content  style="margin-top: 2px">
+
+            <ion-segment color="medium">
+                <ion-segment-button  value="sunny" checked>
+                  <ion-label  color="danger" >Objave</ion-label>
+                </ion-segment-button>
+                <ion-segment-button  value="rainy">
+                  <ion-label  color="danger">Korisnike</ion-label>
+                </ion-segment-button>
+              </ion-segment>
+
+
+
+
+
+
+              <ion-radio-group>
+                  <ion-list-header color="dark">
+                    <ion-label>PRETRAŽITE OBJAVE</ion-label>
+                  </ion-list-header>
+                  <ion-item  color="dark">
+                    <ion-label color="medium">Prema broju objave</ion-label>
+                    <ion-radio slot="start" color="danger" value="apple"></ion-radio>
+                  </ion-item>
+        
+                  <ion-item  color="dark">
+                    <ion-label color="medium">Prema vremenu objavljivanja</ion-label>
+                    <ion-radio slot="start" color="danger" value="apple" ></ion-radio>
+                  </ion-item>
+        
+                  <ion-item  color="dark">
+                    <ion-label color="medium">Prema lokaciji</ion-label>
+                    <ion-radio slot="start" color="danger" value="apple" ></ion-radio>
+                  </ion-item>
+                   
+                  <ion-item  color="dark">
+                    <ion-label color="medium">Prema ključnoj riječi</ion-label>
+                    <ion-radio slot="start" color="danger" value="apple" ></ion-radio>
+                  </ion-item>
+                    
+                  <ion-item  color="dark">
+                      <ion-label color="medium">Prema označenim osobama</ion-label>
+                      <ion-radio slot="start" color="danger" value="apple" ></ion-radio>
+                    </ion-item>
+                </ion-radio-group>
+
+                <ion-radio-group>
+                  <ion-list-header color="dark">
+                    <ion-label>PRETRAŽITE KORISNIKE</ion-label>
+                  </ion-list-header>
+                  <ion-item  color="dark">
+                    <ion-label color="medium">Prema broju korisnika</ion-label>
+                    <ion-radio slot="start" color="danger" value="apple"></ion-radio>
+                  </ion-item>
+                  <ion-item  color="dark">
+                    <ion-label color="medium">Prema komentaru</ion-label>
+                    <ion-radio slot="start" color="danger" value="apple"></ion-radio>
+                  </ion-item>
+                  <ion-item  color="dark">
+                      <ion-label color="medium">Prema objavi koju je postavio</ion-label>
+                      <ion-radio slot="start" color="danger" value="apple"></ion-radio>
+                    </ion-item>
+                </ion-radio-group>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+  </ion-content>

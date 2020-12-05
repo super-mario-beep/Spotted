@@ -1,0 +1,174 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+
+
+.picker-button{
+    --ion-color-primary: #f04141;
+
+}
+.picker-wrapper{
+    --background:rgb(60,60,60);
+}
+.picker-toolbar-button{
+    background-color: rgb(60,60,60);
+
+}
+.picker-opt{
+    color:white
+}
+.picker-above-highlight{
+    left: 0;
+    top: 0;
+    transform: translateZ(90px);
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 81px;
+    background: red;
+    z-index: 10;
+}
+
+
+
+.custom-loader-class{
+    --background:rgb(41,41,41);
+    --spinner-color:red;
+}
+.custom-loader-class-light{
+    --background:rgb(241,241,241);
+    --spinner-color:rgb(59,248,156);
+}
+.custom-toast{
+    --background:#f04141;
+    --color:black;
+}
+.custom-toast-light{
+    --background:rgb(59,248,156);
+    --color:white;
+}
+.alert-custom-class{
+    --background:red;
+    --color:red;
+
+}
+.p_class{
+    color: white;
+}
+.h6_class{
+    color:white;
+    font-weight: bold;
+}
+
+.p_class_light{
+    color: black;
+}
+.h6_class_light{
+    color:black;
+    font-weight: bold;
+}
+
+.alert-class{
+    --background: rgb(40,40,40);
+    --ion-color-primary: red;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: red;
+    --ion-color-primary-tint: red;
+    --ion-color-light: red;
+    --ion-color-light-rgb: 34, 34, 34;
+    --ion-color-light-contrast: #ffffff;
+    --ion-color-light-contrast-rgb: 255, 255, 255;
+    --ion-color-light-shade: red;
+    --ion-color-light-tint: red;
+    --width:300px;
+    --min-width: 300px;
+    
+    .alert-radio-label{
+        color:white!important;
+    }
+    .alert-title{
+        color:red!important;
+    }
+    .alert-checkbox-label{
+        color:white
+    }
+    .alert-radio-group{
+        border-top: 0px!important;
+        border-bottom: 0px!important;
+    }
+}
+
+.alert-class-light{
+    --background: white;
+    --ion-color-primary: rgb(59,248,156);
+    --ion-color-primary-contrast: black;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: red;
+    --ion-color-primary-tint: red;
+    --ion-color-light: red;
+    --ion-color-light-rgb: 34, 34, 34;
+    --ion-color-light-contrast: black;
+    --ion-color-light-contrast-rgb: 255, 255, 255;
+    --ion-color-light-shade: red;
+    --ion-color-light-tint: red;
+    --width:300px;
+    --min-width: 300px;
+
+}
+
+
+ion-item {
+    --background: rgba(0,0,0,0)!important;
+    --border-color: rgba(0, 0, 0, 0)!important;
+}
+
+
+.custom-class{
+    --background:red;
+    --ion-color-primary-contrast: red;
+    --background: white;
+    --ion-color-primary: rgb(59,248,156);
+    --ion-color-primary-contrast: white;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: red;
+    --ion-color-primary-tint: red;
+    --ion-color-light: red;
+    --ion-color-light-rgb: 34, 34, 34;
+    --ion-color-light-contrast: white;
+    --ion-color-light-contrast-rgb: 255, 255, 255;
+    --ion-color-light-shade: red;
+    --ion-color-light-tint: red;
+    --width:300px;
+    --min-width: 300px;
+}
+
+.button-small{
+    height:40px;
+    font-size: 17px;
+}

@@ -1,0 +1,66 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu class="dark_theme" type="overlay">
+      <ion-header>
+        <ion-toolbar color="primary" >
+          <ion-title color="danger"
+          class="title-border"
+          id="jezik_menu"
+          >{{jezik.Menu}}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <div class="background_color">
+
+
+
+        <div  id="user_profile">
+          <div (click)="GoToProfil()" style="height:70px;width:70px;margin:0 auto;">
+              <img src="https://ucarecdn.com/39158dee-e450-4723-8829-46441f84a17a/">
+          </div>
+          <div  (click)="GoToProfil()" style="width:180px;margin:0 auto;">
+            <p id="user_name" style="font-size: 20px;">Korisnik</p>
+            <p  id="user_id">Vaš ID</p>
+            <p  id="user_instagram"></p>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div style="width: 80%;height: 5px;"></div>
+
+          <ion-list class="item item-trns text-center" >
+            <ion-item (click)="GoToHome()" style="font-size: 15px;">
+              <ion-label id="naslovnica_jezik" color="tertiary">{{jezik.Naslovnica}}</ion-label>
+              <ion-icon color="tertiary" slot="start" name="md-images"></ion-icon>
+            </ion-item>
+            <ion-item (click)="GoToChat()" style="font-size: 15px;display:none">
+              <ion-label id="chat_jezik" color="tertiary" >{{jezik.Chat}}</ion-label>
+              <ion-icon color="tertiary" slot="start" name="ios-chatboxes"></ion-icon>
+            </ion-item>
+            <ion-item (click)="GoToProfil()"  style="font-size: 15px;">
+              <ion-label id="profil_jezik" color="tertiary">{{jezik.Profil}}</ion-label>
+              <ion-icon color="tertiary" slot="start" name="md-person"></ion-icon>
+            </ion-item>
+            <ion-item (click)="GoToPitanja()" style="font-size: 15px;">
+                <ion-label id="pitanja_jezik" color="tertiary" >{{jezik.Cesta_pitanja}}</ion-label>
+                <ion-icon color="tertiary" slot="start" name="md-help"></ion-icon>
+              </ion-item>
+            <ion-item (click)="GoToPostavke()"  style="font-size: 15px;">
+                <ion-label id="postavke_jezik" color="tertiary" >{{jezik.Postavke}}</ion-label>
+                <ion-icon color="tertiary" slot="start" name="md-settings"></ion-icon>
+              </ion-item>
+              <ion-item id="admin_panel" (click)="GoToAdmin()" style="display:none;font-size: 15px;">
+                <ion-label id="admin_jezik" color="tertiary" >{{jezik.Admin_poslovi}}</ion-label>
+                <ion-icon color="tertiary" slot="start" name="md-hand"></ion-icon>
+              </ion-item>
+              <ion-item  (click)="LogOut()" style="font-size: 15px;">
+                <ion-label id="odjavise_jezik" color="tertiary" >{{jezik.Odjavi_se}}</ion-label>
+                <ion-icon color="tertiary" slot="start" name="ios-log-out"></ion-icon>
+              </ion-item>
+           </ion-list>
+
+        </div>
+    </div>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

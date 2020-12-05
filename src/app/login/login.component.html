@@ -1,0 +1,54 @@
+<div id="background_id">
+    <div class="main_div">
+      <div style="padding-top: 15px;" id="segmet">
+        <ion-segment color="light">
+          <ion-segment-button (click)="openRegistraciju()" value="sunny" checked>
+            <ion-label  color="medium" >Registriraj se</ion-label>
+          </ion-segment-button>
+          <ion-segment-button (click)="openPrijavu()" value="rainy">
+            <ion-label  color="medium">Prijavi se</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+  
+      <div id="login_div" style="display:none;">
+        <h5>Dobrodošli nazad!</h5>
+        <div class="input">
+          <ion-input [(ngModel)]="LogEmail" (ionChange)="LogNadChange(LogEmail)" color="light" placeholder="    Unesite nadimak" type="text"></ion-input>
+        </div>
+        <div class="input">
+          <ion-input [(ngModel)]="LogLoz" (ionChange)="LogLozChange(LogLoz)" color="light" placeholder="    Unesite lozinku" type="password"></ion-input>
+        </div>
+  
+        <h6 class="danger_colorer" (click)="recovery()"><u>Zaboravili ste lozinku?</u></h6>
+        <div (click)="PrijaviSe()" class="button">
+          <ion-button  color="light">Login</ion-button>
+        </div>
+        
+      </div>
+  
+      <div id="registracija_div" style="display:block;">
+        <h6>Registrirajte se potpuno besplatno i brzo.
+           Ispunite polja i kreirajte profil.
+          </h6>
+        <div class="input">
+          <ion-input [(ngModel)]="RegNad" (ionChange)="RegNadChange(RegNad)"
+          color="light" placeholder="   Nadimak (min. 4 slova)" type="text"></ion-input>
+        </div>
+        <div class="input">
+          <ion-input [(ngModel)]="RegLoz" (ionChange)="RegLozChange(RegLoz)" color="light" placeholder="   Lozinka (min. 6 znakova)" type="password"></ion-input>
+        </div>
+        <div class="input">
+          <ion-input [(ngModel)]="RegLoz2" (ionChange)="RegLoz2Change(RegLoz2)" color="light" placeholder="   Potvrdite lozinku" type="password"></ion-input>
+        </div>
+        <h6 (click)="openTerms()">Pritiskom tipke "Registriraj se" potvrđujete da ste pročitali, razumjeli i da se slažete s našim <u>pravilima korištenja.</u></h6>
+  
+        <div (click)="RegistrirajSe()" class="button">
+          <ion-button  color="light">Registriraj se</ion-button>
+        </div>
+      </div>
+      <div style="height: 17px;"></div>
+    </div>
+    <div style="height: 1500px;"></div>
+</div>
+  

@@ -1,0 +1,311 @@
+.dark_theme{
+    #background_color{
+        background-color: rgb(40,40,40);
+        padding:0px 0px;
+        margin:0 auto;
+    }
+    background-color: black;
+
+
+    .card_box{
+        border-radius: 10px;
+        width: 100%;
+        min-height: 100%;
+        margin:0 auto;
+        background-color: black;
+        padding: 0px;
+        //padding-bottom: 12px;
+    }
+    .segment_div{
+       margin-bottom: 0px;
+       margin-top:0px;
+    }
+    
+    .content_mess{
+        border-radius: 12px;
+        margin-top: 12px;
+        height: 1800px;
+    }
+    .message_div{
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        width:100%;
+        height: 45px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgb(245, 105, 105);
+    }
+    .name_div{
+        color:red;
+        font-weight: bold;
+        margin:0;
+        float:left;
+    }
+    .date_div{
+        color:white;
+        margin:0;
+        float:right;
+        margin-right: 8px;
+    }
+    .message{
+        margin:0px;
+        color:lightgray
+    }
+    .imgsvrlja{
+        margin:5px 12px 5px 5px;
+        float:left;
+        border-radius: 50%;
+        width: 35px;height: 35px;
+    }
+    .poruka_div{
+        width: 100%;
+        //height: 250px;
+        padding-top: 6px;
+        padding-bottom: 0px;
+        //min-height: 100%;
+        height: 300px;
+        
+    }
+    .message_box{
+        margin:6px;
+        margin-top: 0px;
+        padding: 4px;
+        border-radius: 5px;
+        max-width: 75%;
+        background-color: rgb(226, 226, 226);
+
+    }
+    .message_box_r{
+        margin:6px;
+        margin-top: 0px;
+        padding: 4px;
+        border-radius: 5px;
+        max-width: 75%;
+        background-color: white;
+        margin-left: auto;
+    }
+    .mess_time{
+        margin:0px;
+        margin-right:7px;
+        font-size: 13px;
+        text-align: right;
+        color:red
+
+    }
+    .textaera_div_message{
+        border-radius: 14px;
+        padding:2px 6px;
+        height: 40px;
+        width:87%;
+        float: left;
+        background-color: snow;
+
+    }
+    .send_message{
+        background-color: snow;
+        margin:2px auto;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        padding:4.5px 2px 4.5px 7px;
+    }
+    .send_icon{
+        color:red;
+        font-size: 27px;
+        margin:auto;
+        
+    }
+    .background_message_div{
+        background-image: url("../../assets/images/backgrounds/dark_background.jpg");
+        background-size: cover;
+        min-height: 100%;
+        padding-top:6px;
+        padding-bottom: 6px;
+    }
+    .keyboard_hidden_background{
+        height: 1px;
+        width:100%;
+        background-color: black;
+    }
+    .span_new_mess{
+        font-weight: bold;
+        color:white
+    }
+    .ne_mess_new{
+        text-align: center;
+        margin-top:8px;
+        color:white;
+    }
+    .mess_p{
+        margin: 0px;
+    }
+    #new_message_div{
+        background-color: rgb(59, 248, 156);
+    }
+
+    
+
+}
+
+.light_theme{
+    #background_color{
+        background-color: rgb(241,241,241);
+        padding:0px 0px;
+        margin:0 auto;
+    }
+    background-color: rgb(240,240,255);
+
+
+    .card_box{
+        border-radius: 10px;
+        width: 100%;
+        min-height: 100%;
+        margin:0 auto;
+        background-color: white;
+        padding: 0px;
+        //padding-bottom: 12px;
+    }
+    .segment_div{
+       margin-bottom: 0px;
+       margin-top:0px;
+    }
+    
+    .content_mess{
+        border-radius: 12px;
+        margin-top: 12px;
+        height: 1800px;
+    }
+    .message_div{
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        width:100%;
+        height: 45px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgb(59, 248, 156);
+    }
+    .name_div{
+        color:rgb(59, 248, 156);;
+        font-weight: bold;
+        margin:0;
+        float:left;
+    }
+    .date_div{
+        color:black;
+        margin:0;
+        float:right;
+        margin-right: 8px;
+    }
+    .message{
+        margin:0px;
+        color:black
+    }
+    .imgsvrlja{
+        margin:5px 12px 5px 5px;
+        float:left;
+        border-radius: 50%;
+        width: 35px;height: 35px;
+    }
+    .poruka_div{
+        width: 100%;
+        //height: 250px;
+        //padding-top: 6px;
+        padding-bottom: 0px;
+        //min-height: 100%;
+        height: 300px;
+        
+    }
+    .message_box{
+        margin:6px;
+        margin-top: 0px;
+        padding: 4px;
+        border-radius: 5px;
+        max-width: 75%;
+        background-color: rgb(42, 42, 42);
+
+    }
+    .message_box_r{
+        margin:6px;
+        margin-top: 0px;
+        padding: 4px;
+        border-radius: 5px;
+        max-width: 75%;
+        background-color: black;
+        margin-left: auto;
+    }
+    .mess_time{
+        margin:0px;
+        margin-right:7px;
+        font-size: 13px;
+        text-align: right;
+        color:rgb(59, 248, 156);
+
+    }
+    .textaera_div_message{
+        border-radius: 14px;
+        padding:2px 6px;
+        height: 40px;
+        width:87%;
+        float: left;
+        background-color: snow;
+
+    }
+    .send_message{
+        background-color: white;
+        margin:2px auto;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        padding:4.5px 2px 4.5px 7px;
+    }
+    .send_icon{
+        color:rgb(59, 248, 156);
+        font-size: 27px;
+        margin:auto;
+        
+    }
+    .background_message_div{
+        background-image: url("../../assets/images/backgrounds/light_background.jpg");
+        background-size: cover;
+        min-height: 100%;
+        padding-top:6px;
+        padding-bottom: 6px;
+    }
+    .keyboard_hidden_background{
+        height: 1px;
+        width:100%;
+        background-color: white;
+    }
+
+    .span_new_mess{
+        font-weight: bold;
+        color:black
+    }
+    .ne_mess_new{
+        text-align: center;
+        margin-top:8px;
+        color:black;
+    }
+    .mess_p{
+        margin: 0px;
+        color:white;
+    }
+    #chat_menu{
+        background-color: rgb(240,240,255);
+    }
+    
+    --ion-color-medium: white;
+    --ion-color-light: black;
+    --ion-color-danger: rgb(59, 248, 156);
+
+    --ion-color-primary: white;
+    --ion-color-primary-contrast: black;
+
+    --ion-color-primary-shade: white;
+    --ion-color-primary-tint: white;
+
+    --ion-color-danger-contrast: black;
+    --ion-color-danger-shade: rgb(4, 154, 81);
+    --ion-color-danger-tint: rgb(0, 138, 72);
+
+    --ion-color-dark: snow;
+  
+}

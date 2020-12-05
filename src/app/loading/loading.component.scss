@@ -1,0 +1,1046 @@
+
+.dark_theme{
+
+  #background_color{
+      background-color: rgb(40,40,40);
+      padding:0;
+      margin:0 auto;
+      padding-top: 7px;
+      padding-bottom: 12px;
+      min-height: 800px;
+    }
+    
+    #head_line{
+    border-bottom: 1px solid rgb(142, 37, 21);
+    width: 72%;
+    margin-left:14%;
+    }
+    .card{
+    width: 94%;
+    background-color: black;
+    border-radius: 12px;
+    margin: 12px auto;
+    padding-top: 7px;
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+    }
+    .card_content{
+    width: 90%;
+    background-color: black;
+    margin:2px auto;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    
+    }
+    .input{
+      width: 80%;
+      height: 38px;
+      margin: 13px auto;
+      border: 1px solid red;
+  }
+    .locked{
+    font-size: 20px;
+    margin-right: 10px;
+    }
+    .card_content h5{
+    margin:0;
+    }
+    
+
+    
+  #background_color{
+    background-color: rgb(40,40,40);
+    //background-image: url("../../assets/spotted_pic/back_ground_red_black.jpg");
+    padding:0;
+    margin:0 auto;
+  height: 1500px;
+  }
+  .add_image{
+  background-color: rgb(40,40,40);
+  //background-image: url("../../assets/spotted_pic/back_ground_red_black.jpg");
+  padding:0;
+  margin:0 auto;
+
+  }
+
+
+  .card{
+    border: 1px solid red;
+    width:96%;
+    margin: 0px auto;
+    //box-shadow: 2px  3px rgb(142, 37, 21);
+    background-color: rgb(24,24,24);
+    border-radius: 5px;
+    margin-top: 0px;
+  }
+
+  #background_padding{
+    margin: 0px;
+    width: 100%;
+    height: 3px;
+  }
+
+  .toolbar_icons{
+    width:95%;
+    margin: 3px auto;
+    height: 50px;
+    border-bottom: 1px solid rgb(142, 37, 21);
+  }
+  #post_button1{
+    color:gray;
+    padding: 0;
+    min-width: 150px;
+    max-width: 170px;
+    float:left;
+    font-size: 20px;
+    margin-top: 9px;
+    margin-left: 3px;
+    border-right: 1px solid rgb(142, 37, 21);
+  }
+  #post_button2, #post_button3, #post_button4{
+    color: gray;
+    padding: 0;
+    font-size: 25px;
+    float:right;
+    margin:0 8px;
+    margin-top: 9px;
+  }
+  #post_button1_icon{
+    color:gray;
+    padding: 0;
+    float:left;
+    font-size: 20px; 
+    margin-top: 1px;
+    margin-right: 5px;
+    margin-left: 2px;
+  }
+  #post_b_like, #post_b_share, #post_b_comment{
+    width:33.33%;
+    float:left;
+  }
+  #footer_icons{
+    width:90%;
+    margin: 10px auto;
+    height: 55px;
+  }
+  .footer_buttons{
+    text-align: center;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+  .choose_buttons{
+    text-align: center;
+    font-size: 10px;
+    margin-bottom:0px;
+    margin-left: 7px;
+  }
+  .mid_all{
+    margin: 0 auto;
+    width: 80px;
+  }
+  .footer_info_b{
+    width:95%;
+    background-color: red;
+    height: 30px;
+    margin: 0 auto;
+  }
+  .info_button{
+    float:left;
+    width: 33%;
+    text-align: center;
+  }
+  .changeicon{
+    width: 95%;
+    height: 51px;
+    margin:0 auto;
+  }
+  .change_icons{
+    float:left;
+    width:24%;
+
+  }
+  .choose_buttons{
+    font-size:25px;
+    text-align: center;
+  }
+  .icons2, .icons3, .icons1{
+    width: 30px;
+    margin:0px auto;
+    margin-top: 13px;
+    color:lightgray;
+  }
+  .icons2:hover{
+    color:gray;
+  }
+  .icons3:hover{
+    color:rgb(69, 224, 55);
+  }
+  .icons1:hover{
+    color:red;
+  }
+  #textbox{
+    margin: 5px 5%;
+    width:90%;
+  }
+  textarea{
+    height: 170px;
+    width: 100%;
+    border: 0;
+    padding: 0px;
+    background-color: black;
+    color:gray;
+  }
+
+
+  #region_select{
+    width: 90%;
+    margin:0 auto;
+    margin-top: 12px;
+    margin-bottom: 11px;
+    border-right: 1px solid rgb(142, 37, 21);
+    border-left: 1px solid rgb(142, 37, 21);
+    border-bottom: 1px solid rgb(142, 37, 21);
+  }
+  #likeimage{
+    width: 25px;
+    height: 25px;
+    background-image: url("../../assets/images/emoji/like1.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    margin:0;
+    margin-left: 8px;
+    float:left;
+  }
+  #shareimage{
+    width: 25px;
+    height: 25px;
+    background-image: url("../../assets/images/emoji/share1.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    margin:0;
+    margin-left: 8px;
+    float:left;
+  }
+  #commentimage{
+    width: 25px;
+    height: 25px;
+    background-image: url("../../assets/images/emoji/comment1.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    margin:0;
+    margin-left: 8px;
+    float:left;
+  }
+  #image_picker{
+
+    margin: 3px auto;
+    margin-top: 12px;
+    height: 80px;
+    width:100%;
+    max-width: 320px;
+    min-width: 200px;
+    border-right: 1px solid rgb(142, 37, 21);
+    border-left: 1px solid rgb(142, 37, 21);
+    border-bottom: 1px solid rgb(142, 37, 21);
+  }
+  .time_picker{
+    margin: 3px auto;
+    width:100%;
+    max-width: 320px;
+
+    min-width: 200px;
+    border-right: 1px solid rgb(142, 37, 21);
+    border-left: 1px solid rgb(142, 37, 21);
+    border-bottom: 1px solid rgb(142, 37, 21);
+  }
+
+
+
+  .card_box{
+    width: 100%;
+    margin: 0px auto;
+    //border: 1px solid red;
+    //box-shadow: 2px  3px rgb(142, 37, 21);
+    background-color: rgb(24,24,24);
+    border-radius: 5px;
+    margin-top: 0px;
+  }
+  .line{
+  width: 90%;
+  margin:0 auto;
+  height: 1px;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+  }
+  .image{
+    width: 100%;
+    min-height: 200px;
+    margin: 0 auto;
+  }
+  .image img{
+    //border-top-right-radius: 5px;
+    //border-top-left-radius: 5px;
+    width: 100%;
+    //max-height: 350px;
+    min-height: 200px;
+    max-height: 400px;
+  }
+
+  #space_line{
+    height: 1px;
+    width: 100%;
+    margin: 0px;
+    margin-top: 9px;
+    background-image: linear-gradient(to right, coral,red, coral);
+
+
+  }
+
+  .description{
+    width: 96%;
+    margin: 0 auto;
+
+  }
+  .description p{
+    color: gray;
+    font-size: 14px;
+    font-family: "Comic Sans MS";
+    padding: 0 8px;
+  }
+  .description h4{
+    color: lightgrey;
+    padding: 0px;
+    margin-top: 8px;
+    margin-left: 8px;
+    color: gray;
+  }
+  .footer{
+    width: 96%;
+    margin: 0 auto;
+    height: 50px;
+  }
+  .footer_button{
+    width: 33.3333%;
+    height: 25px;
+    float: left;
+  }
+  .like_button{
+    color:red;
+    font-size: 25px;
+  }
+  .comment_button{
+    color:gray;
+    font-size: 25px;
+  }
+  .share_button{
+    color:rgb(69, 224, 55);
+    font-size: 25px;
+  }
+  .icon_position{
+    margin: 0 auto;
+    width: 25px;
+  }
+  .footer_button p{
+    color: lightgray;
+    font-size: 12px;
+    font-family: "Comic Sans MS";
+    padding: 0 8px;
+    text-align: center;
+    margin: 0px;
+    margin-top: -3px;
+  }
+
+  .test{
+    width: 90%;
+    height: 400px;
+    margin:0 auto;
+    background-image: linear-gradient(135deg,black,black,red);
+    display: none;
+  }
+  .test2{
+  width: 90%;
+  height: 400px;
+  margin:0 auto;
+  background-image: linear-gradient(45deg,black,black,red);
+  display:none
+  }
+  .header_info{
+  margin: 0;
+  padding-top: 2px;
+  width: 100%;
+  height: 25px;
+  }
+  .header_info p{
+  color:gray;
+  margin:2px 8px;
+  font-size: 15px;
+  }
+
+
+
+  .text_area{
+  width: 92%;
+  margin:8px auto;
+  border-bottom:1px solid gray;
+  margin-bottom: 0;
+
+  }
+  .footer_leave_comment{
+  width:92%;
+  margin: 5px auto;
+  height: 50px;
+
+  }
+  .footer_buttons{
+  margin: 0;
+  width:50%;
+  float:right;
+  height: 100%;
+  }
+  .footer_buttons p{
+  margin-top:6px;
+  font-size: 15px;
+  color:lightgray;
+  }
+
+
+  .card_comments{
+  border: 1px solid coral;
+  //box-shadow: 2px  3px rgb(142, 37, 21);
+  background-color: rgb(24,24,24);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin: 7px;
+  margin-right:-1px;
+  margin-top: 11px;
+  width: 80%;
+  float: right;
+  color:lightgray;
+  }
+
+
+
+
+  .header_in_comments{
+  width: 98%;
+  height: 15px;
+  margin:0 auto;
+  margin-bottom: 5px;
+
+  }
+  .header_in_comments p{
+  font-size: 12px;
+  margin: 2px;
+  }
+  .post_text{
+  width: 98%;
+  //min-height: 40px;
+  margin: 0 auto;
+  //border-bottom: 1px solid gray;
+  }
+  .footer_in_comments{
+  width: 96%;
+  margin: 0 auto;
+  }
+  .like_button_comments{
+  margin: 5px 0;
+  margin-top: 9px;
+  width: 70%;
+  height: 100%;
+  float:left;
+  border-right: 1px solid gray;
+  }
+  .like_button_comments2{
+  margin: 5px 0;
+  width: 30%;
+  height: 100%;
+  float:right;
+  }
+  .icons_in_comments{
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  float:left;
+  margin-left: 26%;
+  }
+  .like_button_comments p{
+  font-size: 15px;
+  margin:5.5px;
+  }
+  .text_foter{
+  margin: 0;
+  float:left
+  }
+  .insta_tag{
+  color:red;
+  }
+
+  .subcomment{
+  margin:0px;
+  border: 0;
+  float:left;
+  color:lightblue ;
+  font-family: 'Comic Sans MS';
+  padding: 0;
+  font-size: 15px;
+  margin: 0 5px;
+  float: left;
+  }
+
+  .insta_user{
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  }
+  .insta_user p{
+  min-width: 200px;
+  float:left;
+  color:gray;
+  margin: 8px;
+  margin-bottom: 0px;
+  margin-left:10px;
+  }
+  .insta_user img{
+  float:left;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 6px 0;
+  margin-left: 14px;
+  }
+  .card_box p{
+    color:lightgray;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.light_theme{
+  #background_color{
+    background-color: rgb(241,241,241);
+    padding:0;
+    margin:0 auto;
+    padding-top: 7px;
+    padding-bottom: 12px;
+    min-height: 800px;
+  }
+  
+  #head_line{
+  border-bottom: 1px solid rgb(142, 37, 21);
+  width: 72%;
+  margin-left:14%;
+  }
+  .card{
+  width: 94%;
+  background-color: black;
+  border-radius: 12px;
+  margin: 12px auto;
+  padding-top: 7px;
+  border-bottom: 1px solid red;
+  border-right: 1px solid red;
+  }
+  .card_content{
+  width: 90%;
+  background-color: black;
+  margin:2px auto;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  
+  }
+  .input{
+    width: 80%;
+    height: 38px;
+    margin: 13px auto;
+    border: 1px solid lightgreen;
+    background-color: gray;
+  }
+  .locked{
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .card_content h5{
+    margin:0;
+  }
+  
+
+.add_image{
+background-color: rgb(40,40,40);
+//background-image: url("../../assets/spotted_pic/back_ground_red_black.jpg");
+padding:0;
+margin:0 auto;
+
+}
+
+
+.card{
+  border: 1px solid red;
+  width:96%;
+  margin: 0px auto;
+  //box-shadow: 2px  3px rgb(142, 37, 21);
+  background-color: rgb(24,24,24);
+  border-radius: 5px;
+  margin-top: 0px;
+}
+
+#background_padding{
+  margin: 0px;
+  width: 100%;
+  height: 3px;
+}
+
+.toolbar_icons{
+  width:95%;
+  margin: 3px auto;
+  height: 50px;
+  border-bottom: 1px solid rgb(142, 37, 21);
+}
+#post_button1{
+  color:gray;
+  padding: 0;
+  min-width: 150px;
+  max-width: 170px;
+  float:left;
+  font-size: 20px;
+  margin-top: 9px;
+  margin-left: 3px;
+  border-right: 1px solid rgb(142, 37, 21);
+}
+#post_button2, #post_button3, #post_button4{
+  color: gray;
+  padding: 0;
+  font-size: 25px;
+  float:right;
+  margin:0 8px;
+  margin-top: 9px;
+}
+#post_button1_icon{
+  color:gray;
+  padding: 0;
+  float:left;
+  font-size: 20px; 
+  margin-top: 1px;
+  margin-right: 5px;
+  margin-left: 2px;
+}
+#post_b_like, #post_b_share, #post_b_comment{
+  width:33.33%;
+  float:left;
+}
+#footer_icons{
+  width:90%;
+  margin: 10px auto;
+  height: 55px;
+}
+.footer_buttons{
+  text-align: center;
+  font-size: 25px;
+  margin-left: 15px;
+}
+.choose_buttons{
+  text-align: center;
+  font-size: 10px;
+  margin-bottom:0px;
+  margin-left: 7px;
+}
+.mid_all{
+  margin: 0 auto;
+  width: 80px;
+}
+.footer_info_b{
+  width:95%;
+  background-color: red;
+  height: 30px;
+  margin: 0 auto;
+}
+.info_button{
+  float:left;
+  width: 33%;
+  text-align: center;
+}
+.changeicon{
+  width: 95%;
+  height: 51px;
+  margin:0 auto;
+}
+.change_icons{
+  float:left;
+  width:24%;
+
+}
+.choose_buttons{
+  font-size:25px;
+  text-align: center;
+}
+.icons2, .icons3, .icons1{
+  width: 30px;
+  margin:0px auto;
+  margin-top: 13px;
+  color:lightgray;
+}
+.icons2:hover{
+  color:gray;
+}
+.icons3:hover{
+  color:rgb(69, 224, 55);
+}
+.icons1:hover{
+  color:red;
+}
+#textbox{
+  margin: 5px 5%;
+  width:90%;
+}
+textarea{
+  height: 170px;
+  width: 100%;
+  border: 0;
+  padding: 0px;
+  background-color: black;
+  color:gray;
+}
+
+
+#region_select{
+  width: 90%;
+  margin:0 auto;
+  margin-top: 12px;
+  margin-bottom: 11px;
+  border-right: 1px solid rgb(142, 37, 21);
+  border-left: 1px solid rgb(142, 37, 21);
+  border-bottom: 1px solid rgb(142, 37, 21);
+}
+#likeimage{
+  width: 25px;
+  height: 25px;
+  background-image: url("../../assets/images/emoji/like1.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  margin:0;
+  margin-left: 8px;
+  float:left;
+}
+#shareimage{
+  width: 25px;
+  height: 25px;
+  background-image: url("../../assets/images/emoji/share1.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  margin:0;
+  margin-left: 8px;
+  float:left;
+}
+#commentimage{
+  width: 25px;
+  height: 25px;
+  background-image: url("../../assets/images/emoji/comment1.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  margin:0;
+  margin-left: 8px;
+  float:left;
+}
+#image_picker{
+
+  margin: 3px auto;
+  margin-top: 12px;
+  height: 80px;
+  width:100%;
+  max-width: 320px;
+  min-width: 200px;
+  border-right: 1px solid rgb(142, 37, 21);
+  border-left: 1px solid rgb(142, 37, 21);
+  border-bottom: 1px solid rgb(142, 37, 21);
+}
+.time_picker{
+  margin: 3px auto;
+  width:100%;
+  max-width: 320px;
+
+  min-width: 200px;
+  border-right: 1px solid rgb(142, 37, 21);
+  border-left: 1px solid rgb(142, 37, 21);
+  border-bottom: 1px solid rgb(142, 37, 21);
+}
+
+
+
+.card_box{
+  width: 100%;
+  margin: 0px auto;
+  //border: 1px solid red;
+  //box-shadow: 2px  3px rgb(142, 37, 21);
+  background-color: rgb(242,242,242);
+  border-radius: 5px;
+  margin-top: 0px;
+}
+.card_box p{
+  color:black;
+}
+.line{
+width: 90%;
+margin:0 auto;
+height: 1px;
+border-bottom: 1px solid black;
+margin-top: 10px;
+}
+.image{
+  width: 100%;
+  min-height: 200px;
+  margin: 0 auto;
+}
+.image img{
+  //border-top-right-radius: 5px;
+  //border-top-left-radius: 5px;
+  width: 100%;
+  //max-height: 350px;
+  min-height: 200px;
+  max-height: 400px;
+}
+
+#space_line{
+  height: 1px;
+  width: 100%;
+  margin: 0px;
+  margin-top: 9px;
+  background-image: linear-gradient(to right, coral,red, coral);
+
+
+}
+
+.description{
+  width: 96%;
+  margin: 0 auto;
+
+}
+.description p{
+  color: black;
+  font-size: 14px;
+  font-family: "Comic Sans MS";
+  padding: 0 8px;
+}
+.description h4{
+  color: black;
+  padding: 0px;
+  margin-top: 8px;
+  margin-left: 8px;
+  color: black;
+}
+.footer{
+  width: 96%;
+  margin: 0 auto;
+  height: 50px;
+}
+.footer_button{
+  width: 33.3333%;
+  height: 25px;
+  float: left;
+}
+.like_button{
+  color:red;
+  font-size: 25px;
+}
+.comment_button{
+  color:gray;
+  font-size: 25px;
+}
+.share_button{
+  color:rgb(69, 224, 55);
+  font-size: 25px;
+}
+.icon_position{
+  margin: 0 auto;
+  width: 25px;
+}
+.footer_button p{
+  color: black;
+  font-size: 12px;
+  font-family: "Comic Sans MS";
+  padding: 0 8px;
+  text-align: center;
+  margin: 0px;
+  margin-top: -3px;
+}
+
+.test{
+  width: 90%;
+  height: 400px;
+  margin:0 auto;
+  background-image: linear-gradient(135deg,black,black,red);
+  display: none;
+}
+.test2{
+width: 90%;
+height: 400px;
+margin:0 auto;
+background-image: linear-gradient(45deg,black,black,red);
+display:none
+}
+.header_info{
+margin: 0;
+padding-top: 2px;
+width: 100%;
+height: 25px;
+}
+.header_info p{
+color:gray;
+margin:2px 8px;
+font-size: 15px;
+}
+
+
+
+.text_area{
+width: 92%;
+margin:8px auto;
+border-bottom:1px solid gray;
+margin-bottom: 0;
+
+}
+.footer_leave_comment{
+width:92%;
+margin: 5px auto;
+height: 50px;
+
+}
+.footer_buttons{
+margin: 0;
+width:50%;
+float:right;
+height: 100%;
+}
+.footer_buttons p{
+margin-top:6px;
+font-size: 15px;
+color:black;
+}
+
+
+.card_comments{
+border: 1px solid coral;
+//box-shadow: 2px  3px rgb(142, 37, 21);
+background-color: rgb(24,24,24);
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+margin: 7px;
+margin-right:-1px;
+margin-top: 11px;
+width: 80%;
+float: right;
+color:lightgray;
+}
+
+
+
+
+.header_in_comments{
+width: 98%;
+height: 15px;
+margin:0 auto;
+margin-bottom: 5px;
+
+}
+.header_in_comments p{
+font-size: 12px;
+margin: 2px;
+}
+.post_text{
+width: 98%;
+//min-height: 40px;
+margin: 0 auto;
+//border-bottom: 1px solid gray;
+}
+.footer_in_comments{
+width: 96%;
+margin: 0 auto;
+}
+.like_button_comments{
+margin: 5px 0;
+margin-top: 9px;
+width: 70%;
+height: 100%;
+float:left;
+border-right: 1px solid gray;
+}
+.like_button_comments2{
+margin: 5px 0;
+width: 30%;
+height: 100%;
+float:right;
+}
+.icons_in_comments{
+margin: 0;
+width: 25px;
+height: 25px;
+float:left;
+margin-left: 26%;
+}
+.like_button_comments p{
+font-size: 15px;
+margin:5.5px;
+}
+.text_foter{
+margin: 0;
+float:left
+}
+.insta_tag{
+color:red;
+}
+
+.subcomment{
+margin:0px;
+border: 0;
+float:left;
+color:lightblue ;
+font-family: 'Comic Sans MS';
+padding: 0;
+font-size: 15px;
+margin: 0 5px;
+float: left;
+}
+
+.insta_user{
+width: 100%;
+height: 60px;
+background-color: black;
+}
+.insta_user p{
+min-width: 200px;
+float:left;
+color:gray;
+margin: 8px;
+margin-bottom: 0px;
+margin-left:10px;
+}
+.insta_user img{
+float:left;
+width: 48px;
+height: 48px;
+border-radius: 50%;
+margin: 6px 0;
+margin-left: 14px;
+}
+--ion-color-danger: rgb(59, 248, 156);
+--ion-color-danger-contrast: rgb(57, 57, 57);
+--ion-color-danger-shade: rgb(4, 154, 81);
+--ion-color-danger-tint: rgb(0, 138, 72);
+--ion-color-dark: white;
+--ion-color-light-contrast:rgb(57, 57, 57);
+
+--ion-color-primary: white;
+--ion-color-light:black;
+--ion-color-primary-shade: #ffffff;
+--ion-color-light-shade: black;
+--ion-color-light-tint: black;
+--ion-color-primary-contrast: black;
+
+
+}

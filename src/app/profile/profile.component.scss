@@ -1,0 +1,214 @@
+
+.dark_theme{
+  #background_color{
+      background-color: rgb(40,40,40);
+      padding:0;
+      margin:0 auto;
+      min-height: 100%;
+      padding-bottom: 20px;
+    }
+
+    #profile_card{
+    width: 92%;
+    height: 420px;
+    max-width:450px ;
+    margin:10px auto;
+    border-radius: 15px;
+    padding-top: 10px;
+    background-image: url("../../assets/images/login/login_image2.png");
+    background-size: 100% 420px;
+    margin-bottom: 18px;
+    
+    }
+    .main_div{
+    background-color: rgba($color: rgb(24,24,24), $alpha: 0.75);
+    width: 80%;
+    margin: 80px auto;
+    
+    
+    }
+    #segmet{
+    width:60%;
+    margin: 0 auto;
+    }
+    h4{
+    text-align: center;
+    color:gray;
+    font-weight: normal;
+    padding-top: 15px;
+    }
+    h5{
+    text-align: center;
+    color:lightgray;
+    padding-top: 5px;
+    }
+    h6{
+    text-align: center;
+    color:gray;
+    padding-top: 5px;
+    font-size: 13px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+    
+    }
+    p{
+      color:lightgray;
+      margin:5px;
+      margin-left: 10px;
+      color:rgb(251, 82, 56)
+    }
+    .input{
+    width: 80%;
+    height: 38px;
+    margin: 18px auto;
+    border: 1px solid gray;
+    }
+    #button{
+    width: 95px;
+    height: 50px;
+    margin: 8px auto;
+    }
+    #spottedx{
+      width: 92%;
+      height: 385px;
+      //background-color: lightgray;
+      margin:10px auto;
+      max-width:450px ;
+
+      border-radius: 15px;
+      padding-top: 10px;
+      background-image: url("../../assets/images/login/login_image1.png");
+      background-size: 100% 385px;
+    }
+    
+    #SpottedObjave{
+      width: 92%;
+      max-width:450px ;
+
+      //background-color: lightgray;
+      margin:10px auto;
+      border-radius: 15px;
+      padding-top: 10px;
+      background-image: url("../../assets/images/login/login_image4.png");
+      background-size: 100%;
+      padding-bottom: 12px;
+    }
+    .colorer{
+      color:rgb(251, 82, 56)
+    }
+    .toolbar_border{
+      border-bottom:1px solid red;
+    }
+  }
+
+  
+.light_theme{
+  #background_color{
+      background-color: rgb(242, 242, 242);
+      padding:0;
+      margin:0 auto;
+      min-height: 100%;
+      padding-bottom: 20px;
+    }
+
+      #profile_card{
+      width: 92%;
+      height: 420px;
+      max-width:450px ;
+      margin:10px auto;
+      border-radius: 15px;
+      padding-top: 10px;
+      background-image: url("../../assets/images/login/login_image2.png");
+      background-size: 100% 420px;
+      margin-bottom: 18px;
+    
+    }
+    .main_div{
+      background-color: rgba($color: white, $alpha: 0.75);
+      width: 80%;
+      margin: 80px auto;
+    
+    
+    }
+    #segmet{
+      width:60%;
+      margin: 0 auto;
+    }
+    h4{
+      text-align: center;
+      color:gray;
+      font-weight: normal;
+      padding-top: 15px;
+    }
+    h5{
+      text-align: center;
+      color:lightgray;
+      padding-top: 5px;
+    }
+    h6{
+      text-align: center;
+      color:gray;
+      padding-top: 5px;
+      font-size: 13px;
+      padding-left: 8px;
+      padding-right: 8px;
+      text-decoration: none;
+      
+    }
+    p{
+      margin:5px;
+      margin-left: 10px;
+      color:rgb(59, 248, 156)
+    }
+    .input{
+      width: 80%;
+      height: 38px;
+      margin: 18px auto;
+      border: 1px solid gray;
+    }
+    #button{
+      width: 95px;
+      height: 50px;
+      margin: 8px auto;
+    }
+    #spottedx{
+      width: 92%;
+      height: 385px;
+      //background-color: lightgray;
+      margin:10px auto;
+      max-width:450px ;
+
+      border-radius: 15px;
+      padding-top: 10px;
+      background-image: url("../../assets/images/login/login_image1.png");
+      background-size: 100% 385px;
+    }
+    
+    #SpottedObjave{
+      width: 92%;
+      max-width:450px ;
+
+      //background-color: lightgray;
+      margin:10px auto;
+      border-radius: 15px;
+      padding-top: 10px;
+      background-image: url("../../assets/images/login/login_image4.png");
+      background-size: 100%;
+      padding-bottom: 12px;
+    }
+    .colorer{
+      color:rgb(59, 248, 156);
+    }
+    .toolbar_border{
+      border-bottom:1px solid lightgreen;
+    }
+
+
+    --ion-color-danger: rgb(59, 248, 156);
+    --ion-color-danger-contrast: rgb(57, 57, 57);
+    --ion-color-danger-shade: rgb(4, 154, 81);
+    --ion-color-danger-tint: rgb(0, 138, 72);
+    --ion-color-dark: white;
+
+  }
