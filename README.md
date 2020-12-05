@@ -1,5 +1,5 @@
 # Spotted
-App za pronalazak osoba
-Made with Ionic
-PHP scripts on server
+App za pronalazak osoba<br/>
+Made with Ionic<br/>
+PHP scripts on server<br/>
 
